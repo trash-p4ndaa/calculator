@@ -48,10 +48,15 @@ int WinMain(
     wcex.hInstance = hInstance;
     wcex.hIcon = LoadIcon(hInstance, IDI_APPLICATION);
     wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
-    wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+    wcex.hbrBackground = (HBRUSH)CreateSolidBrush(RGB(212, 43, 251));
     wcex.lpszMenuName = nullptr;
     wcex.lpszClassName = szWindowClass;
     wcex.hIconSm = LoadIcon(wcex.hInstance, IDI_APPLICATION);
+
+    if(RegisterClassEx(&wcex) == 0){
+        MessageBox(nullptr, _T("Call to RegisterClassEx failed!"), _T("This is my calculator!"), NULL);
+        return 1;
+    }
 };
 
 //as shown in the name, this function holds the procedures that will execute for specific events

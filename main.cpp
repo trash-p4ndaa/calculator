@@ -4,6 +4,8 @@
 #include <tchar.h>
 using namespace std;
 
+//main reference point for the window: https://learn.microsoft.com/en-us/cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=msvc-170
+
 char sign;
 int a;
 int b;

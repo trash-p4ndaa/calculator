@@ -39,7 +39,7 @@ void calculator(){
         cout << a << " / " << b << " = " << quotient << endl;
         
         if(a==0 || b==0){
-            cout << "It is not possible to divide by 0!" << endl;
+            cout << "Undefined." << endl;
         }
     }
 }
